@@ -46,7 +46,7 @@ class ClassroomController extends Controller
         if (!$classroom) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Không tìm thấy lớp họcnày!'
+                'message' => 'Không tìm thấy lớp học này!'
             ], 404);
         } else {
             return new ClassroomCollection($classroom);

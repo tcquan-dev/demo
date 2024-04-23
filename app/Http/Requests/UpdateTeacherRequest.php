@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ClassroomRequest extends FormRequest
+class UpdateTeacherRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,19 +24,9 @@ class ClassroomRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
-        ];
-    }
-
-        /**
-     * Get the error messages for the defined validation rules.
-     *
-     * @return array<string, string>
-     */
-    public function messages(): array
-    {
-        return [
-            //
+            'name' => 'string',
+            'phone_number' => 'numeric',
+            'subject' => 'string'
         ];
     }
 

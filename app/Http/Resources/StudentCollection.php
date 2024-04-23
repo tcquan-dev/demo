@@ -17,7 +17,7 @@ class StudentCollection extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'phone_number' => $this->phone_number,
+            'phone_number' => $this->phone_number ?? '',
             'classroom' =>
             [
                 'id' => $this->classroom->id,

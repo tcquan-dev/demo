@@ -24,7 +24,6 @@ class StudentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => 'numeric',
             'name' => 'required|string',
             'phone_number' => 'required|numeric',
             'classroom_id' => 'required|numeric'
@@ -47,7 +46,7 @@ class StudentRequest extends FormRequest
     {
         throw new HttpResponseException(response()->json([
             'status' => false,
-            'errors' => $validator->errors()->all()
+            'error' => $validator->errors()->first()
         ], 422));
     }
 }

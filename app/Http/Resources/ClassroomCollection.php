@@ -14,10 +14,14 @@ class ClassroomCollection extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $studentData = StudentCollection::collection($this->students)->map(function ($item, $key) {
+            return collect($item)->except('classroom');
+        });
+
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'students' => StudentCollection::collection($this->students)
+            'students' => $studentData
         ];
     }
 }
