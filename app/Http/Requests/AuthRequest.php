@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ClassroomRequest extends FormRequest
+class AuthRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,26 +25,16 @@ class ClassroomRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-        ];
-    }
-
-    /**
-     * Get the error messages for the defined validation rules.
-     *
-     * @return array<string, string>
-     */
-    public function messages(): array
-    {
-        return [
-            //
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|string|min:8',
         ];
     }
 
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
-            'status' => false,
-            'error' => $validator->errors()->first()
+            'status' => 'error',
+            'message' => $validator->errors()->first()
         ], 422));
     }
 }

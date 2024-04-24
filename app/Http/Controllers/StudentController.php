@@ -29,7 +29,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Thêm học sinh thành công!'
-            ], 200);
+            ]);
         } catch (Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -70,7 +70,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Cập nhật thông tin học sinh thành công!'
-            ], 200);
+            ]);
         }
     }
 
@@ -90,7 +90,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Xóa học sinh thành công!'
-            ], 200);
+            ]);
         }
     }
 }

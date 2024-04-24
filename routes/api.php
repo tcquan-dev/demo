@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ClassroomController;
@@ -16,12 +17,24 @@ use App\Http\Controllers\TeacherController;
 |
 */
 
-Route::resource('classrooms', ClassroomController::class);
-Route::resource('students', StudentController::class);
-Route::resource('teachers', TeacherController::class);
-Route::controller(TeacherController::class)->group(function () {
-    Route::post('teachers/add-to-classroom', 'addTeacherToClassroom');
-    Route::post('teachers/remove-from-classroom', 'removeTeacherFromClassroom');
+Route::group([
+    'middleware' => 'jwt.auth'
+], function () {
+    Route::resource('classrooms', ClassroomController::class);
+    Route::resource('students', StudentController::class);
+    Route::resource('teachers', TeacherController::class);
+    Route::controller(TeacherController::class)->group(function () {
+        Route::post('teachers/add-to-classroom', 'addTeacherToClassroom');
+        Route::post('teachers/remove-from-classroom', 'removeTeacherFromClassroom');
+    });
 });
 
-
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function () {
+    Route::controller(AuthController::class)->group(function () {
+        Route::post('register', 'register');
+        Route::post('login', 'login');
+    });
+});

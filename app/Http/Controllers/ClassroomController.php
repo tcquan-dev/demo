@@ -28,7 +28,7 @@ class ClassroomController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Thêm lớp học thành công!'
-            ], 200);
+            ]);
         } catch (Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -69,7 +69,7 @@ class ClassroomController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Cập nhật thông tin lớp học thành công!'
-            ], 200);
+            ]);
         }
     }
 
@@ -89,7 +89,7 @@ class ClassroomController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Xóa lớp học thành công!'
-            ], 200);
+            ]);
         }
     }
 }

@@ -30,7 +30,7 @@ class TeacherController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Thêm giáo viên thành công!'
-            ], 200);
+            ]);
         } catch (Exception $e) {
             return response()->json([
                 'status' => 'error',
@@ -58,7 +58,7 @@ class TeacherController extends Controller
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Thêm giáo viên vào lớp học thành công!'
-                ], 200);
+                ]);
             }
         } catch (Exception $e) {
             return response()->json([
@@ -82,7 +82,7 @@ class TeacherController extends Controller
                 return response()->json([
                     'status' => 'success',
                     'message' => 'Chuyển giáo viên ra khỏi lớp học thành công!'
-                ], 200);
+                ]);
             } else {
                 return response()->json([
                     'status' => 'error',
@@ -129,7 +129,7 @@ class TeacherController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Cập nhật thông tin giáo viên thành công!'
-            ], 200);
+            ]);
         }
     }
 
@@ -149,7 +149,7 @@ class TeacherController extends Controller
             return response()->json([
                 'status' => 'success',
                 'message' => 'Xóa giáo viên thành công!'
-            ], 200);
+            ]);
         }
     }
 }
