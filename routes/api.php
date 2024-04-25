@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 
 /*
@@ -24,9 +25,10 @@ Route::group([
     Route::resource('students', StudentController::class);
     Route::resource('teachers', TeacherController::class);
     Route::controller(TeacherController::class)->group(function () {
-        Route::post('teachers/add-to-classroom', 'addTeacherToClassroom');
-        Route::post('teachers/remove-from-classroom', 'removeTeacherFromClassroom');
+        Route::post('classroom-management/teachers', 'addTeacherToClassroom');
+        Route::post('classroom-management/teachers/{id}', 'removeTeacherFromClassroom');
     });
+    Route::resource('subjects', SubjectController::class);
 });
 
 Route::group([

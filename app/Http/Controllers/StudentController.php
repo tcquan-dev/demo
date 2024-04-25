@@ -16,7 +16,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return StudentCollection::collection(Student::all());
+        return StudentCollection::collection(Student::orderBy('updated_at', 'desc')->get());
     }
 
     /**
@@ -25,7 +25,12 @@ class StudentController extends Controller
     public function store(StudentRequest $request)
     {
         try {
-            Student::create($request->all());
+            $requestData = array(
+                'name' => $request->post('name'),
+                'phone_number' => $request->post('phone_number'),
+                'classroom_id' => $request->post('classroom_id')
+            );
+            Student::create($requestData);
             return response()->json([
                 'status' => 'success',
                 'message' => 'Thêm học sinh thành công!'
@@ -59,18 +64,25 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $student = Student::find($id);
-        if (!$student) {
+        try {
+            $student = Student::find($id);
+            if (!$student) {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Không tìm thấy học sinh này!'
+                ], 404);
+            } else {
+                $student->update($request->all());
+                return response()->json([
+                    'status' => 'success',
+                    'message' => 'Cập nhật thông tin học sinh thành công!'
+                ]);
+            }
+        } catch (Exception $e) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'Không tìm thấy học sinh này!'
-            ], 404);
-        } else {
-            $student->update($request->all());
-            return response()->json([
-                'status' => 'success',
-                'message' => 'Cập nhật thông tin học sinh thành công!'
-            ]);
+                'message' => $e->getMessage()
+            ], 500);
         }
     }
 

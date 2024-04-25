@@ -25,8 +25,8 @@ class StudentRequest extends FormRequest
     {
         return [
             'name' => 'required|string',
-            'phone_number' => 'required|numeric',
-            'classroom_id' => 'required|numeric'
+            'phone_number' => 'numeric',
+            'classroom_id' => 'numeric'
         ];
     }
 
@@ -45,8 +45,8 @@ class StudentRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
-            'status' => false,
-            'error' => $validator->errors()->first()
+            'status' => 'error',
+            'message' => $validator->errors()->first()
         ], 422));
     }
 }
