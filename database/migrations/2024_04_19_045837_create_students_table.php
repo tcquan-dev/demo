@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('phone_number')->nullable();
-            $table->integer('classroom_id');
+            $table->integer('classroom_id')->nullable();
             $table->timestamps();
         });
     }
