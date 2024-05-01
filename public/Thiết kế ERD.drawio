@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-01T08:50:29.716Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="aFetY7Ja1wvnoSDR9zyI" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-01T08:51:50.310Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="R3-EsmKfXAYJ7gALBUcS" version="24.3.1" type="github">
   <diagram name="Trang-1" id="q1nApXIHh48X9Z10inhE">
     <mxGraphModel dx="636" dy="347" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -63,8 +63,8 @@
         <mxCell id="94nfI3XRYAJ-UsViNRin-19" value="&lt;div&gt;+ id: int&lt;/div&gt;&lt;div&gt;+ name: string&lt;/div&gt;+ avatar: string&lt;div&gt;+ bio: string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="94nfI3XRYAJ-UsViNRin-18" vertex="1">
           <mxGeometry y="26" width="160" height="74" as="geometry" />
         </mxCell>
-        <mxCell id="94nfI3XRYAJ-UsViNRin-21" value="One-to-Many" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="885" y="775" width="80" height="30" as="geometry" />
+        <mxCell id="94nfI3XRYAJ-UsViNRin-21" value="Many-to-Many" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="880" y="775" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="94nfI3XRYAJ-UsViNRin-22" value="&lt;b&gt;categories&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="730" y="897" width="160" height="70" as="geometry">
