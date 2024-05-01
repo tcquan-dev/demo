@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-01T07:03:37.795Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="FOa6Ldu2sfSK9EHkthZW" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-01T07:48:23.428Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Bb3EO4WFR0hbZLY1GT3h" version="24.3.1" type="github">
   <diagram name="Trang-1" id="q1nApXIHh48X9Z10inhE">
     <mxGraphModel dx="1313" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -187,9 +187,6 @@
         <mxCell id="oJdNwzSTmD6IqSpGxCtY-10" value="One-to-Many" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="650" y="300" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="oJdNwzSTmD6IqSpGxCtY-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oJdNwzSTmD6IqSpGxCtY-8" target="94nfI3XRYAJ-UsViNRin-11" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="LGpTEHkHDpueWYcL2o_f-1" value="&lt;b&gt;delivery_addresses&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="900" y="190" width="140" height="130" as="geometry">
             <mxRectangle x="110" y="70" width="70" height="30" as="alternateBounds" />
@@ -209,6 +206,9 @@
         </mxCell>
         <mxCell id="LGpTEHkHDpueWYcL2o_f-4" value="One-to-Many" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;rotation=270;" vertex="1" parent="1">
           <mxGeometry x="915" y="373" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oJdNwzSTmD6IqSpGxCtY-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="94nfI3XRYAJ-UsViNRin-11" target="oJdNwzSTmD6IqSpGxCtY-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
